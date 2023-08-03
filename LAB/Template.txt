@@ -1,0 +1,8 @@
+Aim - syllabus
+Hardware Requirement - System config
+Software Requirement - application with Version number
+Knowledge Requirement - Bulleted Points
+Theory - Detailed Explanation
+Code & Output
+References - Books, W3School
+Conclusion/Inference
