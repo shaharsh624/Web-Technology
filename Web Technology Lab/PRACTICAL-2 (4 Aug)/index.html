@@ -1,0 +1,67 @@
+<html>
+  <style>
+    body {
+      margin: auto;
+      width: 55%;
+      padding-top: 50px;
+      text-align: center;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      font-size: 20px;
+      padding: 2px 4px;
+    }
+
+    th {
+      text-align: center;
+      background-color: lightgreen;
+    }
+    
+    tr:nth-child(odd) {
+            background-color: rgb(241, 241, 177);
+    }
+    .right {text-align: right;}
+  </style>
+  <head>
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Noon Power Generation (positive) and Consuption (negative)</h2>
+    <table >
+      <tr>
+        <th>Component Description</th>
+        <th>Overall Size</th>
+        <th>Noon Power</th>
+        <th>Installed Cost</th>
+      </tr>
+      <tr>
+        <td>PV Solar Collectors</td>
+        <td>137 m<sup>2</sup> panel area</td>
+        <td class="right">+18 kW</td>
+        <td class="right">$45,000</td>
+      </tr>
+      <tr>
+        <td>Immediate Consuption</td>
+        <td>274 m<sup>2</sup> floor area</td>
+        <td class="right">-5 kW</td>
+        <td class="right"></td>
+      </tr>
+      <tr>
+        <td>Chilled Water Storage</td>
+        <td>2.3 m diameter x 2.1 m high</td>
+        <td class="right">-2 kW</td>
+        <td class="right">$1000</td>
+      </tr>
+      <tr>
+        <td>Battery Storage</td>
+        <td>1.3m x 1.0m x 1.1m high, 1250kg</td>
+        <td class="right">+18 kW</td>
+        <td class="right">$6000</td>
+      </tr>
+    </table>
+  </body>
+</html>
