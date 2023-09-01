@@ -1,0 +1,17 @@
+.username:hover {
+  color: yellow;
+}
+
+.password:hover {
+  color: pink;
+}
+
+select {
+  padding: 4px 8px;
+  border-radius: 5px;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px orange;
+}

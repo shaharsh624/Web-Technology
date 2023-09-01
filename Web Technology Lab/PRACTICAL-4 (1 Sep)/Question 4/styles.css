@@ -1,0 +1,16 @@
+
+h1:hover {
+  color: red; 
+}
+
+p:first-child {
+  font-weight: bold;
+}
+
+table:nth-child(even) {
+  background-color: lightgray; 
+}
+
+pre:active {
+  font-family: Courier, monospace; 
+}
