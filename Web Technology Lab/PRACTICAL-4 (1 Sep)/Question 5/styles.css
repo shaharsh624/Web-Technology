@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+}
+
+.section {
+  margin: 5% 5%;
+  padding: 2%;
+  width: 40%;
+  text-align: center;
+  background-color: rgb(216, 216, 216);
+  flex: 1;
+  flex-direction: column;
+}
+
+p {
+  text-align: justify;
+}

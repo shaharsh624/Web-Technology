@@ -1,3 +1,10 @@
+.container {
+  margin: 5% 35%;
+  padding: 1%;
+  text-align: center;
+  background-color: rgb(216, 216, 216);
+}
+
 .username:hover {
   color: yellow;
 }
@@ -11,7 +18,10 @@ select {
   border-radius: 5px;
 }
 
-select:focus {
-  outline: none;
-  box-shadow: 0 0 0 2px orange;
+select:active {
+  color: red;
+}
+
+button:hover {
+  color: blue;
 }
