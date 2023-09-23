@@ -1,0 +1,36 @@
+* {
+    text-align: center;
+}
+
+table {
+    margin-top: 1px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table, td, th {
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+th {
+    background-color: #00008B;
+    color: white;
+}
+
+td {
+    background-color: #e3be9b;
+}
+
+.first {
+    background-color: purple;
+    color: white;
+}
