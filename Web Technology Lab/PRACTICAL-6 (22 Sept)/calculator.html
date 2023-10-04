@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <script>
+      function add() {
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let ans = num1 + num2;
+        document.getElementById("ans").innerHTML = ans;
+      }
+      function subtract() {
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let ans = num1 - num2;
+        document.getElementById("ans").innerHTML = ans;
+      }
+      function multiply() {
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let ans = num1 * num2;
+        document.getElementById("ans").innerHTML = ans;
+      }
+      function divide() {
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let ans = num1 / num2;
+        document.getElementById("ans").innerHTML = ans;
+      }
+      function calculate() {
+        let num1 = Number(document.getElementById("num1").value);
+        let num2 = Number(document.getElementById("num2").value);
+        let add = num1 + num2;
+        let sub = num1 - num2;
+        let mul = num1 * num2;
+        let divide = num1 / num2;
+        let ans = "<p>Sum: <p>" + add + "<p>Subtract: <p>" + sub + "<p>Multiply: <p>" + mul + "<p>Divide: <p>" + divide;
+        document.getElementById("ans").innerHTML = ans;
+      }
+    </script>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+    <form action="">
+      <!-- <input type="button" value="7" onclick="getVal()" />
+      <input type="button" value="8" onclick="getVal()" />
+      <input type="button" value="9" onclick="getVal()" />
+      <input type="button" value="+" onclick="" />
+      <br /><br />
+      <input type="button" value="4" onclick="getVal()" />
+      <input type="button" value="5" onclick="getVal()" />
+      <input type="button" value="6" onclick="getVal()" />
+      <input type="button" value="-" onclick="" />
+      <br /><br />
+      <input type="button" value="1" onclick="getVal()" />
+      <input type="button" value="2" onclick="getVal()" />
+      <input type="button" value="3" onclick="getVal()" />
+      <input type="button" value="*" onclick="" />
+      <br /><br />
+      <input type="button" value=" Calculate " onclick="" />
+      <input type="button" value="/" onclick="" /> -->
+
+      <label for="num1">Enter First Number: </label>
+      <input type="text" onclick="" id="num1" />
+      <br /><br />
+      <label for="num1">Enter Second Number: </label>
+      <input type="text" onclick="" id="num2" />
+      <br /><br />
+      <!-- <input type="button" value="Add" onclick="add()" />
+      <input type="button" value="Subtract" onclick="subtract()" />
+      <input type="button" value="Multiply" onclick="multiply()" />
+      <input type="button" value="Divide" onclick="divide()" /> -->
+      <input type="button" value="Calculate" onclick="calculate()" />
+    </form>
+    <p id="ans"></p>
+  </body>
+</html>
