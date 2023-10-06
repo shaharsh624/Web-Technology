@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <form action="#">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value=""><br><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" value=""><br><br>
+
+        <label for="phone">Phone No:</label>
+        <input type="number" id="phone" name="phone" value=""><br><br>
+
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script>
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var phone = document.getElementById("phone");
+
+        var nameRegex = /^[a-zA-Z\s]+$/;
+        var phoneRegex = /^[0-9]{10}$/;
+
+        function validateName() {
+            if (name.value == "") {
+                name.style.border = "1px solid red";
+                return false;
+            }
+            if (nameRegex.test(name.value)) {
+                name.style.border = "1px solid green";
+                return true;
+            }
+            else {
+                name.style.border = "1px solid red";
+                return false;
+            }
+        }
+        console.log(/abc/.test("abcde"))
+
+
+    </script>
+</body>
+</html>

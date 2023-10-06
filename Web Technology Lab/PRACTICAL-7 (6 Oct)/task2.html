@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <title>Example of the reset focus method</title>
+  </head>
+  <body>
+    <form name="myForm">
+      Enter Name: <input type="text" name="name" size="15" />
+      <br />
+      Enter Phone: <input type="text" name="phone" size="10" /> <br /><br />
+      <input type="reset" value="Reset" id="reset-btn" />
+      <br />
+      <br />
+      <input type="button" value="Set Focus" id="focus-btn" />
+      <br />
+    </form>
+    <script language="JavaScript">
+      document.getElementById("focus-btn").onclick = function () {
+        document.myForm.name.focus();
+      };
+    </script>
+  </body>
+</html>

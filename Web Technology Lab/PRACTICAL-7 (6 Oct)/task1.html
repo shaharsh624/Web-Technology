@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Form 1</h1>
+    <form name="form-1" action="">
+      Name: <input type="text" /><br />
+      E-mail: <input type="text" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <p id="para-1"></p>
+    <br />
+
+    <h1>Form 2</h1>
+    <form name="form-1" action="">
+      Mobile: <input type="text" /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <p id="para-2"></p>
+  </body>
+
+  <script type="text/javascript">
+    for (let i = 0; i < document.forms.length; i++) {
+      document.write(
+        "The form " +
+          (i + 1) +
+          " has " +
+          document.forms[i].length +
+          " elements <br/>"
+      );
+    }
+  </script>
+</html>
