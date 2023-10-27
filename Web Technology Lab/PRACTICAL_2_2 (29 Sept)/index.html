@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>Email</title>
+   <script>
+    function genrateEmal(){
+        var name = document.getElementById("name").value;
+        var email = name + "@sot.pdpu.ac.in";
+        document.getElementById("email").innerHTML = email;
+    }
+
+    function hover(){
+        document.getElementById("hover").innerHTML = "Hello";
+    }
+
+    function out(){
+        document.getElementById("hover").innerHTML = "Hover";
+    }
+
+    function myFocusFunction() {
+        document.getElementById("myInput").style.backgroundColor = "yellow";
+    }
+
+    function myFunction(val) {
+        alert("The input value has changed. The new value is: " + val);
+    }
+
+    function myLoadfunction(){
+        document.getElementById("load").innerHTML = "Page is loaded";
+    }
+
+    // Add an onload event listener to the body tag
+    window.onload = function() {
+        myLoadfunction(); // Call your onload function here
+    };
+ </script>
+</head>
+<body> 
+   <label for="name">Name:</label>              
+   <input type="text" id="name">
+   <br><br>
+   
+   <input type="button" value="Generate Email" onclick="genrateEmal()">
+   <h2 id="email"></h2>
+   <h1 id="hover" onmouseover="hover()" onmouseout="out()">Hover</h1>
+   <input type="text" id="myInput" onfocus="myFocusFunction()">
+   <input type="text" name="txt" value="Hello" onchange="myFunction(this.value)">
+   <p id="load"></p> 
+
+   <!-- Provide a noscript message for users with JavaScript disabled -->
+   <noscript>
+      <p>This website requires JavaScript to function properly. Please enable JavaScript in your browser settings.</p>
+   </noscript>
+</body>
+</html>
