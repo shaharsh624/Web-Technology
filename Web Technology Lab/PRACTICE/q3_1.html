@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      select,
+      input {
+        margin-bottom: 10px;
+      }
+
+      #costDisplay {
+        font-weight: bold;
+        color: green;
+      }
+    </style>
+    <title>iPhone Cost Calculator</title>
+  </head>
+  <body>
+    <label for="product">Select iPhone Model:</label>
+    <select id="product" onchange="updateCost()">
+      <option value="select">Select one model</option>
+      <option value="iPhone 15">iPhone 15</option>
+      <option value="iPhone 15 Max">iPhone 15 Max</option>
+      <option value="iPhone 15 Pro">iPhone Pro</option>
+      <option value="iPhone 15 Pro Max">iPhone 15 Pro Max</option>
+    </select>
+
+    <label for="years">Years:</label>
+    <input
+      type="number"
+      id="years"
+      onchange="updateCost()"
+      placeholder="Enter number of years"
+    />
+
+    <label for="costDisplay">Cost:</label>
+    <input type="text" id="costDisplay" readonly />
+
+    <script>
+      function updateCost() {
+        var selectedProduct = document.getElementById("product").value;
+        var years = document.getElementById("years").value;
+
+        var productCosts = {
+          "iPhone 15": 1000,
+          "iPhone 15 Max": 1200,
+          "iPhone Pro": 1500,
+          "iPhone 15 Pro Max": 1800,
+        };
+
+        var totalCost = productCosts[selectedProduct] * years || 0;
+
+        document.getElementById("costDisplay").value =
+          "$" + totalCost.toFixed(2);
+      }
+    </script>
+  </body>
+</html>

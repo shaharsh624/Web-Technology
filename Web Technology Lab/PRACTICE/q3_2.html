@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+      }
+
+      .input-area {
+        margin-bottom: 20px;
+      }
+
+      .word-input {
+        border: 0.01rem solid #ebe9cf;
+      }
+
+      #sort-btn {
+        background-color: #ebe9cf;
+        margin-top: 10px;
+        padding: 2px 40px;
+        border: 0.01rem solid black;
+      }
+
+      .output-area {
+        margin-top: 20px;
+      }
+
+      .output-area p {
+        color: #4f77b8;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="input-area">
+      <label for="word-input">Words:</label><br /><br />
+      <input id="word-input" /><br /><br />
+      <button id="sort-btn">Sort</button>
+    </div>
+    <div class="output-area">
+      <h2 id="sorted"></h2>
+      <p id="sorted-words"></p>
+    </div>
+    <script>
+      document
+        .getElementById("sort-btn")
+        .addEventListener("click", function () {
+          var container = document.getElementById("output-area");
+          const wordInput = document.getElementById("word-input").value;
+          const words = wordInput
+            .split(" ")
+            .map((word) => word.trim().toLowerCase());
+          words.sort();
+          document.getElementById("sorted").textContent = "Sorted Words:";
+          document.getElementById("sorted-words").textContent =
+            words.join(", ");
+        });
+    </script>
+  </body>
+</html>

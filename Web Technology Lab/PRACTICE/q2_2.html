@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider Example</title>
+  </head>
+  <body>
+    <label for="slider">How much do you like our product?:</label><br />
+    <label for="slider">Not at all</label>
+    <input
+      type="range"
+      id="slider"
+      min="0"
+      max="100"
+      value="50"
+      step="1"
+      onchange="updateValue()"
+    />
+    <label for="slider">More than anything</label>
+    <p><span id="selectedValue"></span></p>
+
+    <script>
+      function updateValue() {
+        var sliderValue = document.getElementById("slider").value;
+        if (sliderValue <= 50) {
+          document.getElementById("selectedValue").textContent =
+            "Selected Value: " + "Not at all";
+        } else {
+          document.getElementById("selectedValue").textContent =
+            "Selected Value: " + "More than anything";
+        }
+      }
+    </script>
+  </body>
+</html>
