@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .bordered {
+        border: 2px solid black;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="hello">Hello</p>
+    <p id="second">Second Line</p>
+    <p id="para">This is in paragraph</p>
+    <p id="last">Last Line</p>
+
+    <!-- <button onclick="addBorder()">Add Border</button> -->
+
+    <script>
+      setTimeout(function () {
+        if (confirm("The content is Hello")) {
+          const text = "This is now changed text";
+          document.getElementById("hello").innerHTML = text;
+          var paragraph = document.getElementById("hello");
+          paragraph.classList.add("bordered");
+        }
+      }, 2000);
+    </script>
+  </body>
+</html>
