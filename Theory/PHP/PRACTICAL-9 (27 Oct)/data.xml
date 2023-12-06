@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+    <book>
+        <title>XML Guide</title>
+        <author>John Doe</author>
+        <genre>Technical</genre>
+        <published>2021</published>
+    </book>
+    <book>
+        <title>Harry Potter and the Sorcerer's Stone</title>
+        <author>J.K. Rowling</author>
+        <genre>Fiction</genre>
+        <published>1997</published>
+    </book>
+</books>

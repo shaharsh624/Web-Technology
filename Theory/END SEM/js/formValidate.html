@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Validation</title>
+    <style>
+      .error {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="myForm" onsubmit="validateForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+      <span id="nameError" class="error"></span>
+
+      <br />
+
+      <label for="email">Email:</label>
+      <input type="text" id="email" name="email" />
+      <span id="emailError" class="error"></span>
+
+      <br />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+      <span id="passwordError" class="error"></span>
+
+      <br />
+
+      <label for="confirmPassword">Confirm Password:</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" />
+      <span id="confirmPasswordError" class="error"></span>
+
+      <br />
+
+      <label>Subscribe to newsletter:</label>
+      <input type="checkbox" id="subscribe" name="subscribe" />
+
+      <br />
+
+      <select id="color" multiple>
+        <option value="1">Red</option>
+        <option value="2">Yellow</option>
+        <option value="3">Green</option>
+        <option value="4">Blue</option>
+      </select>
+
+      <br />
+
+      <input type="submit" value="Submit" />
+    </form>
+
+    <script>
+      function validateForm(event) {
+        // Prevent the form from submitting by default
+        event.preventDefault();
+
+        // Reset error messages
+        clearErrors();
+
+        // Get form values
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+        const confirmPassword =
+          document.getElementById("confirmPassword").value;
+
+        // Validation logic
+        if (!name) {
+          displayError("nameError", "Name is required");
+        }
+
+        if (!email || !isValidEmail(email)) {
+          displayError("emailError", "Invalid email address");
+        }
+
+        if (!password || password.length < 8) {
+          displayError(
+            "passwordError",
+            "Password must be at least 8 characters"
+          );
+        }
+
+        if (password !== confirmPassword) {
+          displayError("confirmPasswordError", "Passwords do not match");
+        }
+
+        // Additional validation logic can be added here
+
+        // If there are no errors, the form can be submitted
+        if (formIsValid()) {
+          alert("Form submitted successfully!");
+          // You can add code to submit the form to the server here
+        }
+      }
+
+      function isValidEmail(email) {
+        // Simple email validation regex (you can use a more sophisticated one)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+      }
+
+      function displayError(elementId, errorMessage) {
+        const errorElement = document.getElementById(elementId);
+        errorElement.textContent = errorMessage;
+      }
+
+      function clearErrors() {
+        const errorElements = document.querySelectorAll(".error");
+        errorElements.forEach((element) => {
+          element.textContent = "";
+        });
+      }
+
+      function formIsValid() {
+        const errorElements = document.querySelectorAll(".error");
+        for (const element of errorElements) {
+          if (element.textContent !== "") {
+            return false; // There are errors, form is not valid
+          }
+        }
+        return true; // Form is valid
+      }
+    </script>
+  </body>
+</html>

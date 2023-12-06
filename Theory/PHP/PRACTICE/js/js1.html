@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>First</title>
+  </head>
+  <body>
+    <h2>Change Text</h2>
+    <p id="demo1" onmouseover="this.innerHTML=Date()">Before</p>
+    <input type="submit" value="Change" onload="changeText();" />
+
+    <!-- document.write() would delete all HTML tags and then write -->
+    <!-- <input type="submit" onclick="document.write(5 + 6)" value="Write" /> -->
+
+    <script>
+      function changeText() {
+        document.getElementById("demo1").innerHTML = "After";
+        window.alert("Changed text");
+        window.print();
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+
+/* Basic styling */
+.form-container {
+    width: 300px;
+    margin: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+textarea {
+    width: 100%;
+    height: 100px;
+}
